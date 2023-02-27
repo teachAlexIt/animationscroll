@@ -34,8 +34,14 @@ h2{
   text-align: right;
   transform: translateX(100vw);
 }
+.start-position_bottom{
+  transform: translateY(50vh);
+}
 .animation{
-  transition: all 0.5s;
+  transition-property: transform, opacity;
+  transition-duration: 0s, 0.5s;
+  transition-delay: 0.5s, 0s;
+  transition-timing-function: cubic-bezier( 0, 0.52, 0, 0.99 );
   opacity: 0;
   /* white-space: pre-line; */
   position: relative;
@@ -43,8 +49,12 @@ h2{
 }
 .animation-element_show{
   transform: translateX(0px);
+  transform: translateY(0);
   opacity: 1;
-  transition: all 1s;
+  transition-property: transform, opacity;
+  transition-duration: 1s, 1.4s;
+  transition-delay: 0s, 0s;
+  transition-timing-function: cubic-bezier( 0, 0.52, 0, 0.99 );
   background-color: rgba(255, 255, 255, 0.466);
 }
 .container div{
